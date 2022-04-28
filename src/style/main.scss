@@ -1,0 +1,29 @@
+@import "variables";
+@import 'navBar';
+@import 'firstSection';
+@import 'secondSection';
+@import 'thirdSection';
+@import 'fourthSection';
+
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+body{
+    margin: 0;
+    background-color: $background-color;
+    height: 2000px;
+    max-width: 2000px;
+}
+:root{
+    --speed: 500ms;
+}
+
+
+
+
+
+
+.after-first-section{
+    margin-top: 50%;
+
+}

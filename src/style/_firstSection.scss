@@ -1,0 +1,26 @@
+@import 'variables';
+
+.container-image-faded{
+    width: 2000px;
+}
+.hero-new__background-image {
+    background-image: url("../media/main-banner-full-horizontal.png") ;
+    background-position: center top;
+    background-size: 100% auto;
+
+
+}
+@media (max-width: 760px) {
+    .hero-new__background-image {
+      background-image: url("../media/main-banner-vertical.png") no-repeat;
+    }
+  }
+.first-section{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url("../media/main-banner-full-horizontal.png") ;
+    background-position: top;
+    background-size: auto 100%;
+
+}

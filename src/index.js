@@ -3,8 +3,8 @@ import {createRoot} from "react-dom/client"
 import NavigationBar from "./components/navigation-bar/NavigationBar"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavigationItem from "./components/navigation-bar/NavigationItem";
-import banner from "./components/main-banner-full-horizontal.png"
-import "./index.scss"
+import banner from "./media/main-banner-full-horizontal.png"
+import "./style/main.scss"
 
 const container = document.getElementById('root')
 const root = createRoot(container)
@@ -24,7 +24,6 @@ const App = () =>{
                                 <NavigationItem title="Who we are" drop="true"/>
                                 <NavigationItem title="Work with us" drop="true"/>
                                 <NavigationItem title="News"/>
-
                         </NavigationBar>
          
                   
