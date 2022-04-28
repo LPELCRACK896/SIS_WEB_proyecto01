@@ -8,7 +8,7 @@ module.exports  = {
     entry:"./src/index.js",
     output:{
         filename: "[name].js",
-        path: path.resolve(__dirname, "bundle")
+        path: path.resolve(__dirname, "proyecto01")
     },
     plugins:[
         new HtmlWebPackPlugin({
