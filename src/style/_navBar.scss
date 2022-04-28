@@ -1,4 +1,5 @@
 @import 'variables';
+
 .nav-bar-list{
     display: flex;
     padding: 0;
@@ -20,7 +21,9 @@
     display: flex;
 
 }
+.wrapper-riot-games-red-dropdown{
 
+}
 #nav-left-content {
     display: flex;
     padding: 0px 0px 0px 2.5%;
@@ -30,16 +33,52 @@
         fill: $riot-red;
       }
 }
+.invisble{
+    position: absolute;
+    background: #fff;
+    color: #000000;
+    font-size: 18px;
+    overflow: hidden;
+    height: 0px;
+    padding: 0;
+    left: 0;
+}
+.riot-white-menu{
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 500px;
+    padding: 0px 30px;
+
+    overflow: auto;
+    transform: translate(-117px, 0px);
+    transition: height 4s;
+
+
+}
 #punch-logo{
     width: 85px;
     height: 80px;
 
 }
+#punch-logo-black{
+    width: 85px;
+    height: 80px;
+
+}
 #arrow-logo-riot{
-    margin-left: 5px;
+    transform: translate(85px, -80px);
     width: 10px;
     height: 80px;
     opacity: 60%;
+}
+#arrow-logo-riot-reverse{
+    position: absolute;
+    transform: rotate(180deg);
+    width: 10px;
+    height: 80px;
+    opacity: 60%;
+
 }
 .arrow-logo-on-title-items{
     margin-left: 5px;
@@ -49,7 +88,6 @@
     fill: white;
 
 }
-
 .nav-item{
     display: flex;
     border-radius: 10px;
@@ -89,8 +127,7 @@
     height: 100%;
 
 }
-
-ul{
+.special-list{
     list-style: none;
     margin: 0;
     padding: 0;
@@ -99,16 +136,150 @@ a{
     color: $font-color;
     text-decoration: none;
 }
+.wrapper-floatin-options-square{
+    padding-top: 10px;
+}
+.floatin-options-square{
+    margin-left: 60px;
+    height: 150px;
+    width: 200px;
+    padding-right: 20px;
+    padding-left: 20px;
+    background-color: #313131;
+    border-top: 5px solid #D13639;
+}
+
+.item-float-options-square{
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 200;
+    color: white;
+    &:hover{
+        background-color: #444444;
+    }
+}
 #nav-right-content{
     width: 40%;
     display: flex;
     padding: 0px 0px 0px 2.5%;
     justify-content: flex-end;
     justify-items: center;
+    margin-right: 10px;
     
 }
 .container-title-item-nav{
     height: 100%;
     margin: 0;
     padding: 0;
+}
+#search-bar-container{
+    position: relative;
+    height: 40px;
+    top: 20px;
+}
+.input-search-bar-black{
+    border-radius: 30px;
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    width: 200px;
+    background-color: #313131;
+    border: none;
+    outline:none;
+    color: white;
+    font-weight: 100px;
+    font-size: small;
+    text-transform: uppercase;
+    &:active{
+        border: none;
+        outline:none;
+    }
+
+}
+.input-search-bar-transparent{
+    border-radius: 30px;
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 30px;
+    padding-bottom: 5px;
+    width: 200px;
+    background-color: transparent;
+    border: 1px solid white;
+    outline:none;
+    color: white;
+    font-weight: 100px;
+    font-size: small;
+    text-transform: uppercase;
+    &:active{
+        border: none;
+        outline:none;
+    }
+
+}
+::placeholder { 
+    color: white;
+    opacity: 1; /* Firefox */
+}
+#search-logo{
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 8px;
+    font-size: 25px;
+    cursor: pointer;
+}
+#signin-button-container{
+    position: relative;
+    height: 40px;
+    top: 20px;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+#button-sign-in{
+    border-radius: 30px;
+    height: 100%;
+    width: 100px;
+    background-color: #D13639;
+    font-size: 12px;
+    font-weight: 500px;
+    padding-top: 0;
+
+    border: none;
+    outline:none;
+    &:active{
+        border: none;
+        outline:none;
+    }
+}
+#wrapper_riot_logo{
+    &:hover{
+        fill: $riot-red;
+    }
+}
+.first-row-on-wmenu{
+
+    display: flex;
+    justify-content: space-between;
+
+}
+#wmenu-exit-button{
+    margin-top: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #ECECEC;
+
+    border: none;
+    outline:none;
+    &:active{
+        border: none;
+        outline:none;
+    }
+}
+.wmen-main-grid{
+    display: grid;
+    grid-template-columns: 16.667% 16.667% 16.667% 50%;
 }

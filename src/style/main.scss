@@ -1,13 +1,14 @@
-@import "variables";
+/* Components styles*/
 @import 'navBar';
 @import 'firstSection';
 @import 'secondSection';
 @import 'thirdSection';
 @import 'fourthSection';
-
+/* Dependencies */
 @import "~bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
-
+/* Other */
+@import "variables";
 body{
     margin: 0;
     background-color: $background-color;

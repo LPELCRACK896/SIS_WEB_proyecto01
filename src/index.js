@@ -2,7 +2,6 @@ import React from "react"
 import {createRoot} from "react-dom/client"
 import NavigationBar from "./components/navigation-bar/NavigationBar"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NavigationItem from "./components/navigation-bar/NavigationItem";
 import banner from "./media/main-banner-full-horizontal.png"
 import "./style/main.scss"
 
@@ -21,9 +20,7 @@ const App = () =>{
                             </div>
                         </div>
                         <NavigationBar>
-                                <NavigationItem title="Who we are" drop="true"/>
-                                <NavigationItem title="Work with us" drop="true"/>
-                                <NavigationItem title="News"/>
+                      
                         </NavigationBar>
          
                   
