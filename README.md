@@ -7,11 +7,18 @@ Una interacción importante que se puede perder a simple vista (y con ello gran 
 - npm < ^8. *Probado en version v8.3.1
 ## Ver proyecto 
 El acceso a este proyecto puede darse de dos formas distintas. 
-- Desde el directorio local, abrir el index.html de la carpeta bundle. 
-- Alternativamente, puede ver el proyecto en el siguiente enlace:  
+- Desde el directorio local, abrir el index.html de la carpeta proyecto01. 
+- Alternativamente, puede ver el proyecto en el siguiente enlace:  http://ec2-52-20-181-247.compute-1.amazonaws.com:3013/#/
 ## Editar proyecto (DEV)
 Como es de costumbre con proyecto que utilizan npm debemos instalar todas las dependencias con el siguiente comando: 
 ```
 npm i 
 ```
-
+Posteriormente podemos reconstruir el proyecto en la carpeta proyecto01 (que es el bundle de este proyecyo). 
+```
+npm run build
+```
+O correr en webpack server con el comando
+```
+npm start
+```
