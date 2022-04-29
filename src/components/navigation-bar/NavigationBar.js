@@ -5,22 +5,55 @@ import { FaSearch } from 'react-icons/fa'
 import {FiX} from 'react-icons/fi'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../style/main.scss'
+/* Components */
 import NavigationItem from './NavigationItem';
 import NavigationItemWOptions from './NavigationItemWOptions';
-
-
-
+import ColourfullCard from '../card/ColourfullCard'
+/* Card images */
+import LeagueOfLegends  from '../../media/wmenu_cards/lol.jpeg'
+import Valorant from '../../media/wmenu_cards/Valorant_2022_E4A3_PlayVALORANT_RiotBarProductCard_1920x1080_MB01.jpeg'
+import LegendsOfRunterraria from '../../media/wmenu_cards/LoR_Riot_BarApplicationSwitcher_GameCards_1920x1080_updated.jpeg'
+import TeamFightTactics from '../../media/wmenu_cards/TFT_622_KV_1920x1080_ALyu_Final.jpeg'
+import LolWildRift from '../../media/wmenu_cards/Wildrift.jpeg'
+import HexTechMayhem from '../../media/wmenu_cards/JFG_Key_Art_T2AV2.jpeg'
+import RuinedKing from '../../media/wmenu_cards/ruined_king.jpeg'
+import ConvRgence from '../../media/wmenu_cards/convergence.jpeg'
+import SongOfNunu from '../../media/wmenu_cards/Everson_KeyArt01.jpeg'
+import RiotForgeGames from '../../media/wmenu_cards/Riot_Forge.jpeg'
+import LolEsport from '../../media/wmenu_cards/LOL_esports.jpeg'
+import ValorantEsport from '../../media/wmenu_cards/valorant_esports.jpeg'
+import Arcane from '../../media/wmenu_cards/arcane.jpeg'
+import Universe from '../../media/wmenu_cards/universe.jpeg'
+import RiotGameMusic from '../../media/wmenu_cards/Riot_Music.jpeg'
+import RiotGames from '../../media/wmenu_cards/Riot_Games.jpeg'
+import RiotMerch from '../../media/wmenu_cards/Riot_Merch.jpeg'
+import RiotMobile from '../../media/wmenu_cards/riot-mobile.jpeg'
+import RiotSupport from '../../media/wmenu_cards/riot-support-2.jpeg'
+/* Defautl Card images */
+import DefaultValorant from '../../media/wmenu_cards/Valorant_2022_E4A3_PlayVALORANT_RiotBarHorizontal_660x428_MB01.jpeg'
+import DefaultTactics from '../../media/wmenu_cards/Riotbar_Promo.jpeg'
 
 const NavigationBar = (props)=> {  
   const [showDropdown, setShowDropdown] = useState(false);
   const [isNavBackgroundVisible, setIsNavBackgroundVisible] = useState(false);
+  const [standBy, setStandBy] = useState(true);
+  const [specialCard, setSpecialCard] = useState(null)
+  const [colorCard, setColorCard] = useState('white')
 
+  const WhiteMenuItemMouseEnterEvent = (cardSrc, color)=>{
+    setStandBy((standBy===null)?"imagen": null)
+    if(standBy===null){
+      setSpecialCard(null)
+    }else{
+      setSpecialCard(cardSrc)
+    }
+    return;
+  }
   window.addEventListener('scroll',() => {
     if((!isNavBackgroundVisible && window.scrollY>0 )||(isNavBackgroundVisible && window.scrollY===0)){
       setIsNavBackgroundVisible(!isNavBackgroundVisible)
     }
   })
-  console.log(`Render ${showDropdown}`)
   return (
     <nav id='main-container' style={
       {
@@ -81,7 +114,110 @@ const NavigationBar = (props)=> {
                 </button>
             </div>
             <div className='wmen-main-grid'>
+              <div className='wmenu-column'>
+                <ul className='special-list'>
+                  <li className='li-title-on-wmenu-column'>
+                    GAMES
+                  </li>
+                  <li className='li-item-on-wmenu-column'  onMouseEnter={() => WhiteMenuItemMouseEnterEvent(LeagueOfLegends)}onMouseLeave={() => WhiteMenuItemMouseEnterEvent()}>
+                    LEAGUE OF LEGENDS
+                  </li>
+                  <li className='li-item-on-wmenu-column'  onMouseEnter={() => WhiteMenuItemMouseEnterEvent(Valorant)} onMouseLeave={() => WhiteMenuItemMouseEnterEvent()}>
+                    VALORANT
+                  </li>
+                  <li className='li-item-on-wmenu-column' onMouseEnter={() => WhiteMenuItemMouseEnterEvent(TeamFightTactics)}onMouseLeave={() => WhiteMenuItemMouseEnterEvent()}>
+                    TEAMFIGHT TACTICS
+                  </li>
+                  <li className='li-item-on-wmenu-column' onMouseEnter={() => WhiteMenuItemMouseEnterEvent(LegendsOfRunterraria)}onMouseLeave={() => WhiteMenuItemMouseEnterEvent()}>
+                    LEGENDS OF RUNETERRA
+                  </li>
+                  <li className='li-item-on-wmenu-column' onMouseEnter={() => WhiteMenuItemMouseEnterEvent(LolWildRift)}onMouseLeave={() => WhiteMenuItemMouseEnterEvent()}>
+                    LOL: WILD RIFT
+                  </li>
+                </ul>
+              </div>
+              <div className='wmenu-column'>
+                <ul className='special-list'>
+                  <li className='li-title-on-wmenu-column'>
+                    FORGE
+                  </li>
+                  <li className='li-item-on-wmenu-column' onMouseEnter={() => WhiteMenuItemMouseEnterEvent(HexTechMayhem)}onMouseLeave={() => WhiteMenuItemMouseEnterEvent()}>
+                    HEXTECH MAYHEN
+                  </li>
+                  <li className='li-item-on-wmenu-column' onMouseEnter={() => WhiteMenuItemMouseEnterEvent(RuinedKing)}onMouseLeave={() => WhiteMenuItemMouseEnterEvent()}>
+                    RUINED KING
+                  </li>
+                  <li className='li-item-on-wmenu-column' onMouseEnter={() => WhiteMenuItemMouseEnterEvent(ConvRgence)}onMouseLeave={() => WhiteMenuItemMouseEnterEvent()}>
+                    CONV/RGENCE
+                  </li>
+                  <li className='li-item-on-wmenu-column'onMouseEnter={() => WhiteMenuItemMouseEnterEvent(SongOfNunu)}onMouseLeave={() => WhiteMenuItemMouseEnterEvent()}>
+                    SONG OF NUNU
+                  </li>
+                  <li className='li-item-on-wmenu-column'onMouseEnter={() => WhiteMenuItemMouseEnterEvent(RiotForgeGames)}onMouseLeave={() => WhiteMenuItemMouseEnterEvent()}>
+                    RIOT FORGE GAMES
+                  </li>  
+                  <li className='li-title-on-wmenu-column not-on-top'>
+                    ESPORTS
+                  </li>
+                  <li className='li-item-on-wmenu-column' onMouseEnter={() => WhiteMenuItemMouseEnterEvent(LolEsport)}onMouseLeave={() => WhiteMenuItemMouseEnterEvent()}>
+                    LOL ESPORTS
+                  </li>
+                  <li className='li-item-on-wmenu-column' onMouseEnter={() => WhiteMenuItemMouseEnterEvent(ValorantEsport)}onMouseLeave={() => WhiteMenuItemMouseEnterEvent()}>
+                    VALORANT ESPORTS
+                  </li>
 
+                </ul>
+              </div>
+              <div className='wmenu-column'>
+                <ul className='special-list'>
+                <li className='li-title-on-wmenu-column'>
+                    ENTERTAINMENT
+                  </li>
+                  <li className='li-item-on-wmenu-column' onMouseEnter={() => WhiteMenuItemMouseEnterEvent(Arcane)}onMouseLeave={() => WhiteMenuItemMouseEnterEvent()}>
+                    ARCANE
+                  </li>
+                  <li className='li-item-on-wmenu-column'onMouseEnter={() => WhiteMenuItemMouseEnterEvent(Universe)}onMouseLeave={() => WhiteMenuItemMouseEnterEvent()}>
+                    UNIVERSE
+                  </li>
+                  <li className='li-item-on-wmenu-column'onMouseEnter={() => WhiteMenuItemMouseEnterEvent(RiotGameMusic)}onMouseLeave={() => WhiteMenuItemMouseEnterEvent()}>
+                    RIOT GAMES MUSIC
+                  </li>
+                  <li className='li-title-on-wmenu-column not-on-top'>
+                    BUSINESS
+                  </li>
+                  <li className='li-item-on-wmenu-column'onMouseEnter={() => WhiteMenuItemMouseEnterEvent(RiotGames)}onMouseLeave={() => WhiteMenuItemMouseEnterEvent()}>
+                    RIOT GAMES
+                  </li>
+                  <li className='li-item-on-wmenu-column'onMouseEnter={() => WhiteMenuItemMouseEnterEvent(RiotMerch)}onMouseLeave={() => WhiteMenuItemMouseEnterEvent()}>
+                    RIOT MERCH
+                  </li>
+                  <li className='li-item-on-wmenu-column'onMouseEnter={() => WhiteMenuItemMouseEnterEvent(RiotMobile)}onMouseLeave={() => WhiteMenuItemMouseEnterEvent()}>
+                    RIOT MOBILE
+                  </li>
+                  <li className='li-item-on-wmenu-column'onMouseEnter={() => WhiteMenuItemMouseEnterEvent(RiotSupport)}onMouseLeave={() => WhiteMenuItemMouseEnterEvent()}>
+                    RIOT SUPPORT
+                  </li>
+                </ul>
+              </div>
+              {(standBy || specialCard===null) &&(
+                <div className='wmenu-card-space-standby' >
+                    <div className='wrapper-standby-card-item'>
+                      <div className='standby-card-item' style={{ backgroundImage: `url(${DefaultValorant})` }}/>
+                      <p>Fade, VALORANT’s new Turkish Initiator Agent, is here to hunt you down. Go ahead, try to hide.</p>                    
+                    </div>
+                    <div className='wrapper-standby-card-item'>
+                      <div className='standby-card-item' style={{ backgroundImage: `url(${DefaultTactics})` }}/> 
+                      <p>Neon Nights brings the latest and greatest in teamfighting technology.</p>                    
+                    </div>
+                </div>
+              )}
+              {(!standBy && specialCard!==null)  &&(
+                  <div className='wmenu-card-space-item-selected' item={specialCard}>
+                      <ColourfullCard specialCard={specialCard}>
+                      </ColourfullCard>
+                  </div>
+              )}
+              
             </div>
           </div>  
           
