@@ -212,9 +212,8 @@ const NavigationBar = (props)=> {
                 </div>
               )}
               {(!standBy && specialCard!==null)  &&(
-                  <div className='wmenu-card-space-item-selected' item={specialCard}>
-                      <ColourfullCard specialCard={specialCard}>
-                      </ColourfullCard>
+                  <div className='wmenu-card-space-item-selected'>
+                      <ColourfullCard specialCard={specialCard}/>
                   </div>
               )}
               
