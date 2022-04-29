@@ -4,6 +4,8 @@ import NavigationBar from "./components/navigation-bar/NavigationBar"
 import { BrowserRouter as Router, Routes, Route, HashRouter } from "react-router-dom";
 import banner from "./media/main-banner-full-horizontal.png"
 import "./style/main.scss"
+import SecondSection from "./components/second-section/SecondSection";
+
 
 const container = document.getElementById('root')
 const root = createRoot(container)
@@ -16,12 +18,10 @@ const App = () =>{
   
                         <div className="first-section">
                             <div className="after-first-section">
-                                <h1>otras secciones</h1>
+                                <SecondSection/>
                             </div>
                         </div>
-                        <NavigationBar>
-                      
-                        </NavigationBar>
+                        <NavigationBar/>
          
                   
                     </div>
